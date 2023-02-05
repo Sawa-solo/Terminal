@@ -105,7 +105,7 @@ mkdir dir_1
  ```bash
  mkdir inner_dir_1
  ```
- 4. Посмотреть где ты находишься 
+ 4. Посмотреть, где ты находишься: 
  ```bash
 pwd  - /Users/aleksandrasoloshenko/terminal_1/dir_1
 ```
@@ -119,6 +119,9 @@ dir_1 % touch tf_1.txt
 - the third 3
 ```bash
 cat >> tf_2.txt
+the first 1
+the second 2
+the third 3
 ```
  7. Зайти в папку inner_dir_1:
  ```bash
@@ -140,12 +143,12 @@ inner_dir_1 % cat >> tf_3.txt
 the second 2
 the sec 2
 ```
- 11. Через cat добавить в текстовый файл tf_2.txt строку “the sec 3”
- 12. Через cat добавить в текстовый файл tf_3.txt строку “the SeCoNd 2”
+ 11.  Через cat добавить в текстовый файл tf_3.txt строку “the SeCoNd 2”
  ```bash
 inner_dir_1 % cat >> tf_3.txt
 the SeCoNd 2
 ```
+ 12. Через cat добавить в текстовый файл tf_2.txt строку “the sec 3”
  13. Через cat добавить в текстовый файл tf_2.txt строку “the seConD 2”
  ```bash
  inner_dir_1 % cat >> tf_2.txt
@@ -176,20 +179,27 @@ inner_dir_1 % cd ..
  19. Найти путь к файлу tf_4.txt:
  ```bash
  terminal_1 % find . -name "tf_4.txt"
- ```
 Путь - ./dir_1/inner_dir_1/tf_4.txt
- 20. Отчистить файл tf_4.txt от содержимого без удаления самого файла.
+```
+ 20. Очистить файл tf_4.txt от содержимого без удаления самого файла:
+ ```bash
 terminal_1 % echo > ./dir_1/inner_dir_1/tf_4.txt
- 21. Найти путь к файлам у которых есть  “tf” в названии.
+```
+ 21. Найти путь к файлам, у которых есть  “tf” в названии:
+ ```bash
 terminal_1 % find . -name "*tf*"
+
 Результат:
 ./dir_1/tf_1.txt
 ./dir_1/tf_2.txt
 ./dir_1/inner_dir_1/tf_3.txt
 ./dir_1/inner_dir_1/tf_2.txt
 ./dir_1/inner_dir_1/tf_4.txt
- 22. Найти путь к файлам у которых есть  “tf” в названии и буквы в любом регистре.
+```
+ 22. Найти путь к файлам, у которых есть  “tf” в названии и буквы в любом регистре:
+ ```bash
  terminal_1 % find . -iname "*tf*"
+ 
 Результат:
 ./dir_1/tf_1.txt
 ./dir_1/tf_2.txt
@@ -197,8 +207,11 @@ terminal_1 % find . -name "*tf*"
 ./dir_1/inner_dir_1/tf_2.txt
 ./dir_1/inner_dir_1/tF_5.txt
 ./dir_1/inner_dir_1/tf_4.txt
- 23. Найти строки в файлах где есть комбинация букв “sec” в текущей папке
+```
+ 23. Найти строки в файлах, где есть комбинация букв “sec” в текущей папке:
+```bash
 dir_1 % grep -r sec .
+
 Результат:
 ./tf_2.txt:the second 2
 ./tf_2.txt:the sec 3
@@ -206,6 +219,7 @@ dir_1 % grep -r sec .
 ./inner_dir_1/tf_3.txt:the sec 2
 ./inner_dir_1/tf_2.txt:the second 2
 ./inner_dir_1/tf_2.txt:the sec 3
+```
  24. Найти строки в файлах где есть комбинация букв “sec” в любом регистре в текущей папке
 dir_1 % grep -r -i sec .
 Результат:
