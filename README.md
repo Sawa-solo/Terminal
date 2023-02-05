@@ -1,6 +1,6 @@
-###### Terminal_1 ######
+# Terminal_1 #
 
-Первая часть первого  ДЗ. Linux terminal (GitBash) commands
+###### Первая часть первого  ДЗ. Linux terminal (GitBash) commands ######
 
 1) Посмотреть где я: 
 ```bash
