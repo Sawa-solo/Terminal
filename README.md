@@ -1,4 +1,4 @@
-# Terminal_1 #
+# Terminal #
 
 ###### Первая часть первого  ДЗ. Linux terminal (GitBash) commands ######
 
